@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zf.sticker">
+    package="com.allever.sticker">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -29,7 +29,7 @@
 
         </provider>
 
-        <activity android:name="com.zf.sticker.ui.MainActivity"
+        <activity android:name="com.allever.sticker.ui.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -37,22 +37,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.zf.sticker.ui.CropActivity"
+        <activity android:name="com.allever.sticker.ui.CropActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.zf.sticker.ui.StickerEditorActivity"
+        <activity android:name="com.allever.sticker.ui.StickerEditorActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.zf.sticker.ui.ShareActivity"
+        <activity android:name="com.allever.sticker.ui.ShareActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.zf.sticker.ui.StoreActivity"
+        <activity android:name="com.allever.sticker.ui.StoreActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.zf.sticker.ui.MyStickerActivity"
+        <activity android:name="com.allever.sticker.ui.MyStickerActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.zf.sticker.ui.StickerDetailActivity"
+        <activity android:name="com.allever.sticker.ui.StickerDetailActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"/>
 
-        <service android:name=".service.DownloadStickerService"/>
+        <service android:name="com.allever.sticker.service.DownloadStickerService"/>
 
     </application>
 
