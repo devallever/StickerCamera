@@ -41,6 +41,7 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -62,10 +63,9 @@ public class StickerDetailActivity extends Activity implements View.OnClickListe
 
     private String mStoreDir;
     private String mStickerName;
-    private TextView tv_download;
+    private TextView tvDownload;
     private StickerDetailItem mStickerDetailItem;
 
-    private RecyclerView mRecyclerView;
     private StickerDetailRecyclerAdapter mStickerDetailRecyclerAdapter;
     private List<String> mPathList = new ArrayList<>();
 
@@ -76,7 +76,6 @@ public class StickerDetailActivity extends Activity implements View.OnClickListe
     private CardView mCardContainer;
 
     private LinearLayout mNetErrorContainer;
-    private Button mBtnRetry;
 
     private Uri mImageUri;
     private boolean mEditing;
@@ -117,18 +116,18 @@ public class StickerDetailActivity extends Activity implements View.OnClickListe
     }
 
     private void initView(){
-        tv_download = (TextView)findViewById(R.id.id_sticker_detail_tv_download);
-        tv_download.setOnClickListener(this);
+        tvDownload = findViewById(R.id.id_sticker_detail_tv_download);
+        tvDownload.setOnClickListener(this);
         if (isDownloaded()){
-            tv_download.setText(R.string.apply);
+            tvDownload.setText(R.string.apply);
         }
 
-        mIvHead = (ImageView)findViewById(R.id.id_sticker_detail_iv_type_head);
-        mIvStickerType = (ImageView)findViewById(R.id.id_sticker_detail_iv_type);
-        mTvName = (TextView)findViewById(R.id.id_sticker_detail_tv_name);
-        mTvSize = (TextView) findViewById(R.id.id_sticker_detail_tv_file_size);
+        mIvHead = findViewById(R.id.id_sticker_detail_iv_type_head);
+        mIvStickerType = findViewById(R.id.id_sticker_detail_iv_type);
+        mTvName = findViewById(R.id.id_sticker_detail_tv_name);
+        mTvSize = findViewById(R.id.id_sticker_detail_tv_file_size);
 
-        mRecyclerView = (RecyclerView)findViewById(R.id.id_sticker_detail_rv_sticker);
+        RecyclerView mRecyclerView = findViewById(R.id.id_sticker_detail_rv_sticker);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, 6));
         mStickerDetailRecyclerAdapter = new StickerDetailRecyclerAdapter(this, mPathList);
         mRecyclerView.setAdapter(mStickerDetailRecyclerAdapter);
@@ -140,10 +139,10 @@ public class StickerDetailActivity extends Activity implements View.OnClickListe
             }
         });
 
-        mCardContainer = (CardView)findViewById(R.id.id_card_container);
+        mCardContainer = findViewById(R.id.id_card_container);
 
-        mNetErrorContainer = (LinearLayout)findViewById(R.id.id_net_error);
-        mBtnRetry = (Button)findViewById(R.id.id_net_error_btn_retry);
+        mNetErrorContainer = findViewById(R.id.id_net_error);
+        Button mBtnRetry = findViewById(R.id.id_net_error_btn_retry);
         mBtnRetry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -166,7 +165,7 @@ public class StickerDetailActivity extends Activity implements View.OnClickListe
                         mApplyDialog.hide();
                         //choose pic
                         if (PermissionUtil.hasPermission(StickerDetailActivity.this, PermissionUtil.PERMISSION_WRITE_EXTERNAL_STORAGE)){
-                            ControllerEnum.getIns().chooseImageFromGallery(StickerDetailActivity.this, REQUEST_PICK_IMAGE);
+                            ControllerEnum.chooseImageFromGallery(StickerDetailActivity.this, REQUEST_PICK_IMAGE);
                         }else {
                             PermissionUtil.requestPermission(StickerDetailActivity.this, PermissionUtil.PERMISSION_WRITE_EXTERNAL_STORAGE, REQUEST_CODE_PERMISSION_STORAGE);
                         }
@@ -178,7 +177,7 @@ public class StickerDetailActivity extends Activity implements View.OnClickListe
                         mApplyDialog.hide();
                         //open camera
                         if (PermissionUtil.hasPermission(StickerDetailActivity.this, PermissionUtil.PERMISSION_CAMERA)){
-                            mImageUri = ControllerEnum.getIns().openCamera(StickerDetailActivity.this, RESULD_CODE_TAKE_PHOTO);
+                            mImageUri = ControllerEnum.openCamera(StickerDetailActivity.this, RESULD_CODE_TAKE_PHOTO);
                         }else {
                             PermissionUtil.requestPermission(StickerDetailActivity.this, PermissionUtil.PERMISSION_CAMERA, REQUEST_CODE_PERMISSION_CAMERA);
                         }
@@ -212,7 +211,7 @@ public class StickerDetailActivity extends Activity implements View.OnClickListe
             case REQUEST_CODE_PERMISSION_STORAGE:
                 if (PermissionUtil.hasPermission(this,PermissionUtil.PERMISSION_WRITE_EXTERNAL_STORAGE)) {
                     //允许
-                    ControllerEnum.getIns().chooseImageFromGallery(StickerDetailActivity.this, REQUEST_PICK_IMAGE);
+                    ControllerEnum.chooseImageFromGallery(StickerDetailActivity.this, REQUEST_PICK_IMAGE);
                 }else {
                     if (PermissionUtil.hasAlwaysDeniedPermission(this,PermissionUtil.PERMISSION_WRITE_EXTERNAL_STORAGE)){
                         openPermissionSetting();
@@ -222,7 +221,7 @@ public class StickerDetailActivity extends Activity implements View.OnClickListe
             case REQUEST_CODE_PERMISSION_CAMERA:
                 if (PermissionUtil.hasPermission(this,PermissionUtil.PERMISSION_CAMERA)) {
                     //允许
-                    mImageUri = ControllerEnum.getIns().openCamera(this, RESULD_CODE_TAKE_PHOTO);
+                    mImageUri = ControllerEnum.openCamera(this, RESULD_CODE_TAKE_PHOTO);
                 }else {
                     if (PermissionUtil.hasAlwaysDeniedPermission(this,PermissionUtil.PERMISSION_CAMERA)){
                         openPermissionSetting();
@@ -266,9 +265,9 @@ public class StickerDetailActivity extends Activity implements View.OnClickListe
                     startService(downloadService);
 
                     //刷新下载中的按钮按钮状态
-                    tv_download.setBackgroundColor(getResources().getColor(R.color.gray700));
-                    tv_download.setClickable(false);
-                    tv_download.setText(R.string.download_ing);
+                    tvDownload.setBackgroundColor(getResources().getColor(R.color.gray700));
+                    tvDownload.setClickable(false);
+                    tvDownload.setText(R.string.download_ing);
 
                 }else {
                     //已经下载，
@@ -295,9 +294,7 @@ public class StickerDetailActivity extends Activity implements View.OnClickListe
             @Override
             public void onCompleted() {
                 //遍历数据项，获取图片的URL地址
-                for (String path: mStickerDetailItem.getSticklisturl()){
-                    mPathList.add(path);
-                }
+                Collections.addAll(mPathList, mStickerDetailItem.getSticklisturl());
 
                 //设置头部大图和小图
                 setImageIntoIv();
@@ -330,11 +327,7 @@ public class StickerDetailActivity extends Activity implements View.OnClickListe
     private boolean isDownloaded(){
         File stickerDir = new File(mStoreDir + "/" + mStickerName);
         if (stickerDir.exists()){
-            if (stickerDir.list().length > 0){
-                return true;
-            }else {
-                return false;
-            }
+            return stickerDir.list().length > 0;
         }else {
             return false;
         }
@@ -344,20 +337,20 @@ public class StickerDetailActivity extends Activity implements View.OnClickListe
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onDownloading(DownloadEvent  event){
         //下载时会发送该事件刷新显示进度
-        tv_download.setText(event.getProgress() + "%");
+        tvDownload.setText(event.getProgress() + "%");
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onDownloadListener(String event){
         if (Constant.EVENT_DOWNLOAD_FINISH.equals(event) || Constant.EVENT_DOWNLOAD_ERROR.equals(event )){
-            tv_download.setText(R.string.apply);
+            tvDownload.setText(R.string.apply);
         }
         if (Constant.EVENT_DOWNLOAD_ERROR.equals(event)){
-            tv_download.setText(R.string.retry);
+            tvDownload.setText(R.string.retry);
             Toast.makeText(this, R.string.download_fail, Toast.LENGTH_SHORT).show();
         }
-        tv_download.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-        tv_download.setClickable(true);
+        tvDownload.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        tvDownload.setClickable(true);
 
     }
 

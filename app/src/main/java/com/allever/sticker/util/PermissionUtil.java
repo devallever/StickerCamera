@@ -22,7 +22,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by Mac on 18/2/6.
+ *
+ * @author Allever
+ * @date 18/2/6
  */
 
 public class PermissionUtil {

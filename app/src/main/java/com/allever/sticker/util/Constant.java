@@ -7,59 +7,6 @@ package com.allever.sticker.util;
 public class Constant {
     public final static String SHARE_IMG_PATH_EXTERA = "share_image_path";
 
-    public static final String AD_TAG_MOBINTER = "mobinter";
-    public static final String AD_TAG_MOBINTER_EXIT = "mobinter_exit";
-    public static final String AD_TAG_MOBBAN = "mobban";
-
-    public final static String AD_DATA = "{\n" +
-            "    \"mobinter\": {\n" +
-            "        \"dpa\": \"\", \n" +
-            "        \"dpf\": \"\", \n" +
-            "        \"pdg\": \"\", \n" +
-            "        \"pl\": [\n" +
-            "            {\n" +
-            "                \"cate\": \"F\", \n" +
-            "                \"pub\": \"1205988342865320_1205990999531721\"\n" +
-            "            }, \n" +
-            "            {\n" +
-            "                \"cate\": \"A\", \n" +
-            "                \"pub\": \"ca-app-pub-9021314419915874/4895607840\"\n" +
-            "            }\n" +
-            "        ]\n" +
-            "    }, \n" +
-            "    \"mobinter_exit\": {\n" +
-            "        \"dpa\": \"\", \n" +
-            "        \"dpf\": \"\", \n" +
-            "        \"pdg\": \"\", \n" +
-            "        \"pl\": [\n" +
-            "            {\n" +
-            "                \"cate\": \"F\", \n" +
-            "                \"pub\": \"1205988342865320_1205990999531721\"\n" +
-            "            }, \n" +
-            "            {\n" +
-            "                \"cate\": \"A\", \n" +
-            "                \"pub\": \"ca-app-pub-9021314419915874/4895607840\"\n" +
-            "            }\n" +
-            "        ]\n" +
-            "    }, \n" +
-            "    \"mobban\": {\n" +
-            "        \"dpa\": \"\", \n" +
-            "        \"dpf\": \"\", \n" +
-            "        \"pdg\": \"\", \n" +
-            "        \"pl\": [\n" +
-            "            {\n" +
-            "                \"cate\": \"F\", \n" +
-            "                \"pub\": \"1205988342865320_1205990999531721\"\n" +
-            "            }, \n" +
-            "            {\n" +
-            "                \"cate\": \"A\", \n" +
-            "                \"pub\": \"ca-app-pub-9021314419915874/9617273875\"\n" +
-            "            }\n" +
-            "        ]\n" +
-            "    }\n" +
-            "}";
-
-
     public static final String EVENT_DELETE_STICKER = "EVENT_DELETE_STICKER";
     public static final String EVENT_ADD_STICKER = "EVENT_ADD_STICKER";
     public static final String EVENT_FINISH_STORE_ACTIVITY = "EVENT_FINISH_STORE_ACTIVITY";

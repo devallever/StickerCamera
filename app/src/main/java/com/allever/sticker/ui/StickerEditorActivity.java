@@ -117,9 +117,9 @@ public class StickerEditorActivity extends AppCompatActivity implements StickerF
 //        if(!isShowAd) {
 //            isShowAd = true;
 //            //初始化广告
-//            MobService.getIns().startService(this, Constant.AD_DATA,new AdFactory());
+//            MobService.startService(this, Constant.AD_DATA,new AdFactory());
 //            //显示banner
-//            MobService.getIns().loadBanner(this, "mobban", new IMobAdListener() {
+//            MobService.loadBanner(this, "mobban", new IMobAdListener() {
 //                @Override
 //                public void onAdLoaded(IMobAd mobAd) {
 //                    if (mIsActivityVisible && mobAd != null){
@@ -139,13 +139,13 @@ public class StickerEditorActivity extends AppCompatActivity implements StickerF
     @Override
     protected void onPause() {
         super.onPause();
-//        MobService.getIns().onPause(this);
+//        MobService.onPause(this);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-//        MobService.getIns().onResume(this);
+//        MobService.onResume(this);
         mIsActivityVisible = true;
     }
 

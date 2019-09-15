@@ -19,13 +19,8 @@ import java.io.IOException;
  * @date 18/5/25
  */
 
-public enum ControllerEnum {
-    INSTANCE;
-    public static ControllerEnum getIns(){
-        return INSTANCE;
-    }
-
-    public Uri openCamera(Activity activity, int requestCode){
+public class ControllerEnum {
+    public static Uri openCamera(Activity activity, int requestCode){
         if (activity == null){
             return null;
         }
@@ -57,7 +52,7 @@ public enum ControllerEnum {
     /**
      * 从相册中选择一张图片后， 回调Activity的onActivityResult方法进行处理
      * */
-    public void chooseImageFromGallery(Activity activity, int requestCode){
+    public static void chooseImageFromGallery(Activity activity, int requestCode){
         Intent albumIntent = new Intent(Intent.ACTION_PICK);
         albumIntent.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         activity.startActivityForResult(albumIntent, requestCode);
@@ -66,7 +61,7 @@ public enum ControllerEnum {
     /**
      * 手动打开权限设置界面，手动添加权限, 回调Activity的onActivityResult方法进行处理
      * */
-    public void openPermissionSetting(Activity activity, int requestCode){
+    public static void openPermissionSetting(Activity activity, int requestCode){
         PermissionUtil.openPermissionManually(activity, requestCode, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

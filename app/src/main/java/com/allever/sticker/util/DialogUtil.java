@@ -10,7 +10,9 @@ import android.widget.TextView;
 import com.allever.sticker.R;
 
 /**
- * Created by Mac on 18/2/11.
+ *
+ * @author Allever
+ * @date 18/2/11
  */
 
 public class DialogUtil {

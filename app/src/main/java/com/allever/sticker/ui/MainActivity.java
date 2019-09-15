@@ -110,7 +110,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
             case REQUEST_CODE_PERMISSION_STORAGE:
                 if (PermissionUtil.hasPermission(this,PermissionUtil.PERMISSION_WRITE_EXTERNAL_STORAGE)) {
                     //允许
-                    ControllerEnum.getIns().chooseImageFromGallery(this, REQUEST_PICK_IMAGE);
+                    ControllerEnum.chooseImageFromGallery(this, REQUEST_PICK_IMAGE);
                 }else {
                     if (PermissionUtil.hasAlwaysDeniedPermission(this,PermissionUtil.PERMISSION_WRITE_EXTERNAL_STORAGE)){
                         openPermissionSetting();
@@ -121,7 +121,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
             case REQUEST_CODE_PERMISSION_CAMERA:
                 if (PermissionUtil.hasPermission(this,PermissionUtil.PERMISSION_CAMERA)) {
                     //允许
-                    mImageUri = ControllerEnum.getIns().openCamera(this, RESULD_CODE_TAKE_PHOTO);
+                    mImageUri = ControllerEnum.openCamera(this, RESULD_CODE_TAKE_PHOTO);
                 }else {
                     if (PermissionUtil.hasAlwaysDeniedPermission(this,PermissionUtil.PERMISSION_CAMERA)){
                         openPermissionSetting();
@@ -141,7 +141,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
             case R.id.id_main_btn_pick_img:
                 //如果有存储权限，则打开相册选择图片，否则申请存储权限
                 if (PermissionUtil.hasPermission(this, PermissionUtil.PERMISSION_WRITE_EXTERNAL_STORAGE)){
-                    ControllerEnum.getIns().chooseImageFromGallery(this, REQUEST_PICK_IMAGE);
+                    ControllerEnum.chooseImageFromGallery(this, REQUEST_PICK_IMAGE);
                 }else {
                     PermissionUtil.requestPermission(this, PermissionUtil.PERMISSION_WRITE_EXTERNAL_STORAGE, REQUEST_CODE_PERMISSION_STORAGE);
                 }
@@ -149,7 +149,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
             case R.id.id_main_btn_camera:
                 //如果有相机权限，则打开相机，否则申请相机权限
                 if (PermissionUtil.hasPermission(this, PermissionUtil.PERMISSION_CAMERA)){
-                    mImageUri = ControllerEnum.getIns().openCamera(this, RESULD_CODE_TAKE_PHOTO);
+                    mImageUri = ControllerEnum.openCamera(this, RESULD_CODE_TAKE_PHOTO);
                 }else {
                     PermissionUtil.requestPermission(this, PermissionUtil.PERMISSION_CAMERA, REQUEST_CODE_PERMISSION_CAMERA);
                 }

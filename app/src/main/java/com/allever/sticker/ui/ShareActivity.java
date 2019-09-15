@@ -71,10 +71,10 @@ public class ShareActivity extends Activity implements View.OnClickListener{
 //            isShowAd = true;
 //
 //            //初始化广告
-//            MobService.getIns().startService(this, Constant.AD_DATA,new AdFactory());
+//            MobService.startService(this, Constant.AD_DATA,new AdFactory());
 //
 //            //显示插屏
-//            MobService.getIns().loadInterstitalAd(this, "mobinter", new IMobAdListener() {
+//            MobService.loadInterstitalAd(this, "mobinter", new IMobAdListener() {
 //                @Override
 //                public void onAdLoaded(IMobAd mobAd) {
 //                    if(mIsActivityVisible && mobAd != null){
@@ -89,7 +89,7 @@ public class ShareActivity extends Activity implements View.OnClickListener{
 //            });
 //
 //            //加载并显示banner
-//            MobService.getIns().loadBanner(this, "mobban", new IMobAdListener() {
+//            MobService.loadBanner(this, "mobban", new IMobAdListener() {
 //                @Override
 //                public void onAdLoaded(IMobAd mobAd) {
 //                    if (mIsActivityVisible && mobAd != null){
@@ -108,13 +108,13 @@ public class ShareActivity extends Activity implements View.OnClickListener{
     @Override
     protected void onPause() {
         super.onPause();
-//        MobService.getIns().onPause(this);
+//        MobService.onPause(this);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-//        MobService.getIns().onResume(this);
+//        MobService.onResume(this);
         mIsActivityVisible = true;
     }
 
@@ -180,7 +180,7 @@ public class ShareActivity extends Activity implements View.OnClickListener{
                 if (PermissionUtil.hasPermission(this,
                         PermissionUtil.PERMISSION_READ_EXTRNAL_STORAGE,
                         PermissionUtil.PERMISSION_WRITE_EXTERNAL_STORAGE)){
-                    ControllerEnum.getIns().chooseImageFromGallery(this, REQUEST_CODE_PICK_IMAGE);
+                    ControllerEnum.chooseImageFromGallery(this, REQUEST_CODE_PICK_IMAGE);
                 }else {
                     //没有权限，则申请相应权限，后回调onRequestPermissionsResult()
                     PermissionUtil.requestPermission(this,
@@ -199,13 +199,13 @@ public class ShareActivity extends Activity implements View.OnClickListener{
             case REQUEST_CODE_PERMISSION_STORAGE:
                 if (PermissionUtil.hasPermission(this,PermissionUtil.PERMISSION_WRITE_EXTERNAL_STORAGE)) {
                     //用户已授权，则打开相册选择图片
-                    ControllerEnum.getIns().chooseImageFromGallery(this, REQUEST_CODE_PICK_IMAGE);
+                    ControllerEnum.chooseImageFromGallery(this, REQUEST_CODE_PICK_IMAGE);
 
                 }else {
                     //如果用户选择了不在提示,则弹出手动设置权限的对话框
                     if (PermissionUtil.hasAlwaysDeniedPermission(this,
                             PermissionUtil.PERMISSION_WRITE_EXTERNAL_STORAGE)){
-                        ControllerEnum.getIns().openPermissionSetting(this,
+                        ControllerEnum.openPermissionSetting(this,
                                 REQUEST_CODE_PERMISSION_SETTING_MANUALLY);
                     }
                 }
