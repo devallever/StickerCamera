@@ -1,4 +1,4 @@
-package com.allever.sticker.adapter;
+package com.allever.sticker.ui.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;

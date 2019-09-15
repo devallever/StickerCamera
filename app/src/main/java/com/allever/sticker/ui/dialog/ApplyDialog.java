@@ -1,4 +1,4 @@
-package com.allever.sticker.dialog;
+package com.allever.sticker.ui.dialog;
 
 import android.app.Activity;
 import android.view.LayoutInflater;

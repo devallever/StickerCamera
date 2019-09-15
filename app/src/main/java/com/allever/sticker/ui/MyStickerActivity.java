@@ -11,7 +11,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.allever.sticker.R;
-import com.allever.sticker.adapter.MyStickerAdapter;
+import com.allever.sticker.ui.adapter.MyStickerAdapter;
 import com.allever.sticker.bean.MyStickerItem;
 import com.allever.sticker.event.DeleteStickerEvent;
 import com.allever.sticker.util.Constant;

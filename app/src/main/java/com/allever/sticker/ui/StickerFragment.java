@@ -12,9 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.allever.sticker.R;
-import com.allever.sticker.RecyclerItemClickListener;
+import com.allever.sticker.ui.adapter.RecyclerItemClickListener;
 import com.allever.sticker.bean.Sticker;
-import com.allever.sticker.adapter.StickerRecyclerAdapter;
+import com.allever.sticker.ui.adapter.StickerRecyclerAdapter;
 
 /**
  *

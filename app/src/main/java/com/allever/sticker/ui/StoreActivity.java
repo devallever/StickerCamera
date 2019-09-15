@@ -18,10 +18,10 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.allever.sticker.R;
-import com.allever.sticker.RecyclerItemClickListener;
+import com.allever.sticker.ui.adapter.RecyclerItemClickListener;
 import com.allever.sticker.bean.StoreStickerData;
 import com.allever.sticker.network.RetrofitUtil;
-import com.allever.sticker.adapter.StickerStoreAdapter;
+import com.allever.sticker.ui.adapter.StickerStoreAdapter;
 import com.allever.sticker.bean.StoreStickerItem;
 import com.allever.sticker.util.Constant;
 import com.allever.sticker.util.DialogUtil;

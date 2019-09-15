@@ -30,7 +30,7 @@ import android.widget.Toast;
 import com.allever.sticker.CustomStickerIconEvent;
 import com.allever.sticker.R;
 import com.allever.sticker.bean.Sticker;
-import com.allever.sticker.adapter.StickerFragmentPagerAdapter;
+import com.allever.sticker.ui.adapter.StickerFragmentPagerAdapter;
 import com.allever.sticker.bean.StickerData;
 import com.allever.sticker.util.Constant;
 import com.allever.sticker.util.DialogUtil;
