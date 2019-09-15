@@ -1,7 +1,9 @@
 package com.zf.sticker.bean;
 
 /**
- * Created by Mac on 18/2/9.
+ *
+ * @author Allever
+ * @date 18/2/9
  */
 
 public class MyStickerItem {

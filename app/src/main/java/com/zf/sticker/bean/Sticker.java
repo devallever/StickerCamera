@@ -3,7 +3,9 @@ package com.zf.sticker.bean;
 import java.util.List;
 
 /**
- * Created by Allever on 2017/12/31.
+ *
+ * @author Allever
+ * @date 2017/12/31
  */
 
 public class Sticker {

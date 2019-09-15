@@ -40,7 +40,9 @@ import rx.Observer;
 
 
 /**
- * Created by Mac on 18/2/8.
+ *
+ * @author Allever
+ * @date 18/2/8
  */
 
 public class StoreActivity extends Activity {

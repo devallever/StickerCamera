@@ -50,7 +50,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Mac on 18/2/10.
+ *
+ * @author Allever
+ * @date 18/2/10
  */
 
 public class StickerDetailActivity extends Activity implements View.OnClickListener{

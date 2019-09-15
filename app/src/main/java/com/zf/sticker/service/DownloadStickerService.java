@@ -91,7 +91,7 @@ public class DownloadStickerService extends Service {
 
     private FileDownloadListener mFileDownloadListener;
     private int mTaskId;
-    private DownloadTask mDownloadTask;
+
     private void initDownload(){
         mDownloading = true;
         FileDownloader.setup(this);
@@ -138,7 +138,7 @@ public class DownloadStickerService extends Service {
     }
 
     private void startDownload(){
-        mDownloadTask = (DownloadTask) FileDownloader.getImpl().create(mUrl);
+        DownloadTask mDownloadTask = (DownloadTask) FileDownloader.getImpl().create(mUrl);
         mTaskId = mDownloadTask.setPath(mStoreDir + "/" + mStickerName + ".zip" ,false)
                 .setListener(mFileDownloadListener)
                 .start();
@@ -222,8 +222,7 @@ public class DownloadStickerService extends Service {
     }
 
     public PendingIntent getDefalutIntent(int flags){
-        PendingIntent pendingIntent= PendingIntent.getBroadcast(this, 1, new Intent(), flags);
-        return pendingIntent;
+        return PendingIntent.getBroadcast(this, 1, new Intent(), flags);
     }
 
     class MyBroadcastReceiver extends BroadcastReceiver {

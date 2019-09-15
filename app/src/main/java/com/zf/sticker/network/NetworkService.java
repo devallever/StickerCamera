@@ -8,7 +8,9 @@ import retrofit2.http.Path;
 import rx.Observable;
 
 /**
- * Created by Mac on 18/2/10.
+ *
+ * @author Allever
+ * @date 18/2/10
  */
 
 public interface NetworkService {

@@ -34,7 +34,9 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * Created by Mac on 18/2/8.
+ *
+ * @author Allever
+ * @date 18/2/8
  */
 
 public class MyStickerActivity extends Activity {

@@ -12,7 +12,9 @@ import com.zf.sticker.bean.Sticker;
 import com.bumptech.glide.Glide;
 
 /**
- * Created by Allever on 2017/12/31.
+ *
+ * @author Allever
+ * @date 2017/12/31
  */
 
 public class StickerRecyclerAdapter extends RecyclerView.Adapter<StickerRecyclerAdapter.StickerViewHolder> {

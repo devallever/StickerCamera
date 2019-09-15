@@ -62,6 +62,9 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
+/**
+ * @author allever
+ */
 public class StickerEditorActivity extends AppCompatActivity implements StickerFragment.OnStickerClickListener,
         View.OnClickListener{
 

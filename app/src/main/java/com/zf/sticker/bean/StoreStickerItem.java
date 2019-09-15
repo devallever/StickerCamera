@@ -1,7 +1,9 @@
 package com.zf.sticker.bean;
 
 /**
- * Created by Mac on 18/2/8.
+ *
+ * @author Allever
+ * @date 18/2/8
  */
 
 public class StoreStickerItem {

@@ -28,7 +28,9 @@ import java.io.File;
 import java.util.List;
 
 /**
- * Created by Mac on 18/1/3.
+ *
+ * @author Allever
+ * @date 18/1/3
  */
 
 public class ShareActivity extends Activity implements View.OnClickListener{

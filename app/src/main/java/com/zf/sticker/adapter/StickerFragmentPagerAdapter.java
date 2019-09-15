@@ -9,7 +9,9 @@ import com.zf.sticker.ui.StickerFragment;
 import java.util.List;
 
 /**
- * Created by Allever on 2017/12/31.
+ *
+ * @author Allever
+ * @date 2017/12/31
  */
 
 public class StickerFragmentPagerAdapter extends FragmentStatePagerAdapter {

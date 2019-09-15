@@ -17,7 +17,9 @@ import com.zf.sticker.bean.Sticker;
 import com.zf.sticker.adapter.StickerRecyclerAdapter;
 
 /**
- * Created by Allever on 2017/12/31.
+ *
+ * @author Allever
+ * @date 2017/12/31
  */
 
 public class StickerFragment extends Fragment {

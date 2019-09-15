@@ -18,7 +18,9 @@ import org.greenrobot.eventbus.EventBus;
 import java.util.List;
 
 /**
- * Created by Mac on 18/2/9.
+ *
+ * @author Allever
+ * @date 18/2/9
  */
 
 public class MyStickerAdapter extends RecyclerView.Adapter<MyStickerAdapter.MyViewHolder> {

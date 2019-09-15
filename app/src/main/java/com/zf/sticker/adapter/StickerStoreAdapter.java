@@ -17,7 +17,9 @@ import java.util.List;
 import javax.microedition.khronos.opengles.GL;
 
 /**
- * Created by Mac on 18/2/8.
+ *
+ * @author Allever
+ * @date 18/2/8
  */
 
 public class StickerStoreAdapter extends RecyclerView.Adapter<StickerStoreAdapter.MyViewHolder> {

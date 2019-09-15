@@ -15,7 +15,9 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by Allever on 2017/1/15.
+ *
+ * @author Allever
+ * @date 2017/1/15
  */
 
 public class RetrofitUtil {

@@ -3,7 +3,9 @@ package com.zf.sticker.bean;
 import java.util.List;
 
 /**
- * Created by Mac on 18/2/9.
+ *
+ * @author Allever
+ * @date 18/2/9
  */
 
 public class StickerData {

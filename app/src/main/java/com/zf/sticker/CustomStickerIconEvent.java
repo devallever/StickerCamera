@@ -6,7 +6,9 @@ import com.xiaopo.flying.sticker.StickerIconEvent;
 import com.xiaopo.flying.sticker.StickerView;
 
 /**
- * Created by Mac on 18/1/2.
+ *
+ * @author Allever
+ * @date 18/1/2
  */
 
 public class CustomStickerIconEvent implements StickerIconEvent {

@@ -1,7 +1,9 @@
 package com.zf.sticker.event;
 
 /**
- * Created by Mac on 18/2/24.
+ *
+ * @author Allever
+ * @date 18/2/24
  */
 
 public class DownloadEvent {

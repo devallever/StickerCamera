@@ -13,7 +13,9 @@ import com.zf.sticker.R;
 import java.util.List;
 
 /**
- * Created by Mac on 18/2/11.
+ *
+ * @author Allever
+ * @date 18/2/11
  */
 
 public class StickerDetailRecyclerAdapter extends RecyclerView.Adapter<StickerDetailRecyclerAdapter.MyViewHolder> {

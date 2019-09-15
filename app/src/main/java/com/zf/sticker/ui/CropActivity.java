@@ -37,7 +37,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by Mac on 18/1/2.
+ *
+ * @author Allever
+ * @date 18/1/2
  */
 
 public class CropActivity extends AppCompatActivity implements View.OnClickListener{

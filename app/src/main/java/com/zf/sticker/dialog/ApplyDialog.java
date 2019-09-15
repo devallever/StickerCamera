@@ -8,7 +8,9 @@ import android.widget.LinearLayout;
 import com.zf.sticker.R;
 
 /**
- * Created by Mac on 18/2/23.
+ *
+ * @author Allever
+ * @date 18/2/23
  */
 
 public class ApplyDialog extends BaseDialog{

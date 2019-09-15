@@ -10,7 +10,9 @@ import com.zf.sticker.R;
 
 
 /**
- * Created by allever on 17-10-20.
+ *
+ * @author allever
+ * @date 17-10-20
  */
 
 public class DownloadProgressDialog extends  BaseDialog{

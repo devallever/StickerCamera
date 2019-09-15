@@ -8,7 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.view.View;
 
 /**
- * Created by CHARWIN.
+ * @author allever
  */
 
 public abstract class BaseDialog implements DialogInterface.OnShowListener, DialogInterface.OnDismissListener {
