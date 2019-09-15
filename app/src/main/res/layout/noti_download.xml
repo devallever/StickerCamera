@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/id_noti_download_iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_launcher_128"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/id_noti_download_iv"
+        />
+
+    <ImageView
+        android:id="@+id/id_noti_download_iv_pause_start"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_pause"
+        android:padding="10dp"/>
+
+    <ProgressBar
+        android:id="@+id/id_noti_download_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ProgressStyleDownload"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/id_noti_download_iv"
+        android:layout_toLeftOf="@id/id_noti_download_iv_pause_start"
+        android:background="@color/gray_c"/>
+
+    <TextView
+        android:id="@+id/id_noti_download_tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 %"
+        android:layout_below="@id/id_noti_download_progress_bar"
+        android:layout_toRightOf="@id/id_noti_download_iv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="10sp"
+        android:textColor="@color/black"/>
+
+</RelativeLayout>

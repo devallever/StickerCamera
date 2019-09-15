@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_sticker_editor_rl_root"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zf.sticker.ui.StickerEditorActivity"
+    android:background="@color/gray_e">
+
+    <RelativeLayout
+        android:id="@+id/id_sticker_editor_rl_tool"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_toolbar_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:id="@+id/id_sticker_editor_ll_back">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_arrow_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:id="@+id/id_sticker_editor_ll_save">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="@string/save_share"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:textSize="18sp"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_arrow_save"/>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_sticker_editor_rl_sticker_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_sticker_editor_rl_tool"
+        android:layout_above="@id/id_sticker_editor_tab_layout_sticker_type">
+
+        <com.xiaopo.flying.sticker.StickerView
+            android:id="@+id/id_sticker_editor_stick_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:showBorder="true"
+            app:showIcons="true"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:id="@+id/id_sticker_editor_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </com.xiaopo.flying.sticker.StickerView>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_sticker_editor_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/gray_fa"
+            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/id_sticker_editor_fl_ad_container"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@drawable/ic_bg_banner">-->
+        <!--<include layout="@layout/right"/>-->
+    <!--</FrameLayout>-->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/id_sticker_editor_cl_store_container"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:cardElevation="10dp">
+        <ImageView
+            android:id="@+id/id_sticker_editor_iv_store"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_edit_store"
+            android:scaleType="centerCrop"
+            android:background="@color/white"/>
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/id_sticker_editor_tab_layout_sticker_type"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/id_sticker_editor_cl_store_container"
+        app:tabMode="scrollable"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        android:background="@color/gray_fa"
+        app:tabBackground="@drawable/tab_background"
+        app:tabMaxWidth="53dp"/>
+
+</RelativeLayout>

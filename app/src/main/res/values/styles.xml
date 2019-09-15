@@ -1,0 +1,74 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Button.Borderless" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:textSize">@dimen/text_size_s</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style>
+
+    <style name="FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--<style name="LauncherTheme" parent="FullScreenTheme">-->
+        <!--<item name="android:windowBackground">@drawable/window_bg</item>-->
+    <!--</style>-->
+
+    <style name="alertDialogStyle" parent="@style/Theme.AppCompat.Dialog.Alert">
+        <!--<item name="android:background">@drawable/dialog_box</item>-->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/blue500</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="android:windowMinWidthMajor">51%</item>
+        <item name="android:windowMinWidthMinor">30%</item>
+    </style>
+
+    <style name="ProgressStyleDownload" parent="Base.Widget.AppCompat.ProgressBar.Horizontal">
+
+        <item name="android:maxHeight">50dp</item>
+        <item name="android:minHeight">5dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/shape_progress_horizonal</item>
+
+    </style>
+    
+    <style name="share_btn_style">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+   <style name="share_btn_container">
+       <item name="android:layout_width">0dp</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="android:layout_weight">1</item>
+       <item name="android:orientation">vertical</item>
+       <item name="android:layout_gravity">center</item>
+       <item name="android:layout_margin">0dp</item>
+       <item name="android:minWidth">50dp</item>
+   </style>
+
+    <style name="share_btn_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray700</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+</resources>

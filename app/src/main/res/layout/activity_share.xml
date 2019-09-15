@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/id_sticker_editor_rl_tool"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_toolbar_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:id="@+id/id_share_ll_back">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_arrow_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_share_tv_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="@string/home"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <!-- Banner 广告位 -->
+    <FrameLayout
+        android:id="@+id/id_share_fl_ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ic_bg_banner">
+
+        <include layout="@layout/right"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/id_share_ll_share_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/id_share_fl_ad_container">
+
+        <LinearLayout
+            style="@style/share_btn_container">
+            <ImageView
+                android:id="@+id/id_share_btn_facebook"
+                style="@style/share_btn_style"
+                android:src="@drawable/ic_share_facebook"/>
+            <TextView
+                style="@style/share_btn_text"
+                android:text="@string/facebook"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/share_btn_container">
+            <ImageView
+                android:id="@+id/id_share_btn_twtter"
+                style="@style/share_btn_style"
+                android:src="@drawable/ic_share_twtter"/>
+            <TextView
+                style="@style/share_btn_text"
+                android:text="@string/twtter"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/share_btn_container">
+            <ImageView
+                android:id="@+id/id_share_btn_line"
+                style="@style/share_btn_style"
+                android:src="@drawable/ic_share_line"/>
+            <TextView
+                style="@style/share_btn_text"
+                android:text="@string/line"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/share_btn_container">
+            <ImageView
+                android:id="@+id/id_share_btn_whatsapp"
+                style="@style/share_btn_style"
+                android:src="@drawable/ic_share_whatsapp"/>
+            <TextView
+                style="@style/share_btn_text"
+                android:text="@string/whatsapp"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/share_btn_container">
+            <ImageView
+                android:id="@+id/id_share_btn_more"
+                style="@style/share_btn_style"
+                android:src="@drawable/ic_share_more"/>
+            <TextView
+                style="@style/share_btn_text"
+                android:text="@string/more"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 分割线 -->
+    <RelativeLayout
+        android:id="@+id/id_share_rl_save_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/id_share_ll_share_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/id_share_tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share_directly"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:textSize="12sp"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_c"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/id_share_tv_share"
+            android:layout_marginLeft="30dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_c"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/id_share_tv_share"
+            android:layout_marginRight="30dp"/>
+    </RelativeLayout>
+
+    <!-- 展示结果 -->
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        android:layout_above="@id/id_share_rl_edit_next"
+        android:layout_below="@id/id_sticker_editor_rl_tool">
+        <ImageView
+            android:id="@+id/id_share_iv"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"/>
+    </android.support.v7.widget.CardView>
+
+    <!-- 编辑下一张 -->
+    <RelativeLayout
+        android:id="@+id/id_share_rl_edit_next"
+        android:layout_width="165dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/id_share_rl_save_state"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_bg_btn_edit_next">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_btn_edit_next"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_next"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

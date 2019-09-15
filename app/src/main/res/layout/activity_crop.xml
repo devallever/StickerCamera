@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/id_crop_rl_option_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/id_crop_iv_cancel"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_cancel"/>
+
+        <ImageView
+            android:id="@+id/id_crop_btn_save"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_save"
+            android:padding="5dp"/>
+    </RelativeLayout>
+
+
+    <HorizontalScrollView
+        android:id="@+id/id_crop_h_scroll_view_crop_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/id_crop_rl_option_container"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scrollbars="none"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/id_crop_btn_rotate"
+                style="@style/AppTheme.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/crop_rotate"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/id_crop_btn_free"
+                style="@style/AppTheme.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/crop_custom"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/id_crop_btn_1_1"
+                style="@style/AppTheme.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/crop_1_1"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/id_crop_btn_4_3"
+                style="@style/AppTheme.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_crop_image_view"
+                android:padding="10dp"
+                android:text="@string/crop_4_3"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/id_crop_btn_3_4"
+                style="@style/AppTheme.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/crop_3_4"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/id_crop_btn_16_9"
+                style="@style/AppTheme.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/crop_16_9"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/id_crop_btn_9_16"
+                style="@style/AppTheme.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/crop_9_16"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!--<com.isseiaoki.simplecropview.CropImageView-->
+        <!--android:id="@+id/id_crop_image_view"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:src="@mipmap/ic_launcher"/>-->
+
+    <com.isseiaoki.simplecropview.CropImageView
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/id_crop_image_view"
+        android:layout_weight="1"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:scv_crop_mode="fit_image"
+        custom:scv_background_color="@color/gray_e"
+        custom:scv_handle_color="@color/white"
+        custom:scv_guide_color="@color/white"
+        custom:scv_overlay_color="@color/overlay"
+        custom:scv_frame_color="@color/white"
+        custom:scv_handle_size="14dp"
+        custom:scv_touch_padding="8dp"
+        custom:scv_handle_show_mode="show_always"
+        custom:scv_guide_show_mode="show_always"
+        custom:scv_min_frame_size="50dp"
+        custom:scv_frame_stroke_weight="1dp"
+        custom:scv_guide_stroke_weight="1dp"
+        android:layout_above="@id/id_crop_h_scroll_view_crop_type"/>
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/id_crop_progress_cropping"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:visibility="invisible"/>-->
+
+</RelativeLayout>
