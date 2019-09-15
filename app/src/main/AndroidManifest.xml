@@ -54,18 +54,6 @@
 
         <service android:name=".service.DownloadStickerService"/>
 
-        <meta-data
-            android:name="UMENG_APPKEY"
-            android:value="5a71560df43e487507000230" >
-        </meta-data>
-        <meta-data
-            android:name="UMENG_CHANNEL"
-            android:value="googleplay" >
-        </meta-data>
-        <meta-data
-            android:name="UMENG_LOCAL_VERSION"
-            android:value="false" >
-        </meta-data>
     </application>
 
 </manifest>
