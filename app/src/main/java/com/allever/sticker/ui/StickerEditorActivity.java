@@ -317,6 +317,7 @@ public class StickerEditorActivity extends AppCompatActivity implements StickerF
     private Bitmap uri2Bitmap(Uri uri){
         try {
             // 读取uri所在的图片
+            Log.d(TAG, "uri2Bitmap: uri = " + uri.getPath());
             Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
             return bitmap;
         } catch (Exception e) {
